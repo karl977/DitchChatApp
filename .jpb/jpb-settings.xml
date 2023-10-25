@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseMigrationSettings" lastSelectedDirectory="src/main/resources/db/migration" />
+  <component name="JpaLiquibaseChangesConfig">
+    <exclude-change idName="spring_session" tagName="dropTable" />
+    <exclude-change idName="spring_session_attributes" tagName="dropTable" />
+  </component>
+  <component name="PersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit moduleName="chat-web" name="Default">
+        <packages>
+          <package value="com.karl.chatweb" />
+        </packages>
+      </persistence-unit>
+    </persistence-units>
+  </component>
+</project>
