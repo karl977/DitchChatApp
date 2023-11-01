@@ -1,0 +1,161 @@
+:root {
+    --glow-image: url(/images/pattern.png), radial-gradient(50% 50% at center -25px, var(--primary-color) 0%, #000 100%);
+    --glow-blend: hard-light, color-dodge;
+    --chat-header-footer: #2b3a49;
+    --chat-background: #17171a;
+}
+
+:root[data-darkmode="false"] {
+    --glow-image: url(/images/pattern.png), radial-gradient(50% 50% at center top, var(--primary-100) 0%, #fff 100%);
+    --glow-blend: hard-light, multiply;
+    --chat-header-footer: #d5d5d5;
+    --chat-background: #f9f9f9;;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    background-color: var(--surface-ground);
+    height: 100%;
+    background-blend-mode: var(--glow-blend);
+    background-image: var(--glow-image);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: auto 20rem;
+}
+
+#app {
+    height: 100%;
+
+}
+
+.content {
+    padding: 0px 14rem
+}
+
+.login_card {
+    width: 500px;
+}
+
+nav a {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.header-buttons {
+    margin-top: 15px;
+}
+
+.header-buttons button {
+    margin-left: 10px;
+}
+
+.stream-card {
+    background-color: var(--surface-card);
+}
+
+$card-image-height: 248px;
+$card-image-width: 440px;
+
+.stream-card-image-container {
+    height: $card-image-height;
+    width: $card-image-width;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+}
+
+.stream-card-image-holder {
+    height: $card-image-height;
+    width: $card-image-width;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    transition: all 0.3s;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-zoom {
+    transform: scale(1.1);
+}
+
+.viewers-badge {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.streams-container>div {
+    margin-right: 20px;
+}
+
+.badge-img{
+    margin-right: 4px;
+    position: relative;
+    top: 3px; 
+}
+
+.chat-message-img {
+    position: relative;
+    top: 6px;
+}
+
+.clip-view {
+    height: 660px;
+}
+
+.chat-container {
+    width: 330px;
+    height: 662px;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color:  var(--chat-header-footer);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.chat-messages-container {
+    background: var(--chat-background);
+    overflow-y: scroll;
+    max-height: 542px;
+    padding: 5px 0px;
+}
+.chat-message{
+    display:block;
+    margin-top: 5px;
+    word-break: break-word;
+}
+
+.message-box-container {
+    border: 1px solid var(--surface-border);
+}
+
+.send-message-text {
+    position: absolute;
+    padding: 5px;
+    z-index: -1;
+}
+
+.message-box {
+    padding: 5px;
+}
+
+.chat-footer {
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: var(--chat-header-footer);
+}
+
+.channel-points-container {
+    float: left;
+    fill: var(--primary-color);
+    display: inline-flex;
+}
+
+.channel-points-vector{
+    padding-top:2px
+}
+
+.chat-button {
+    float: right;
+    padding: 0.3rem 0.5rem;
+}
