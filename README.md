@@ -1,6 +1,6 @@
 # Ditch Chat App
 
-This repository contains a hobby project built to improve knowledge of Spring framework, Mockito, Testcontainers, Vue and Typescript.
+This repository contains a hobby project built to improve knowledge of Spring framework, Vue, Typescript, Mockito and Testcontainers.
 
 ![](/screenshot.png "Screenshot of app")
 
@@ -8,16 +8,18 @@ This repository contains a hobby project built to improve knowledge of Spring fr
 - Single-page application 
 - Registration and login
 - Working chat with captured messages from real Twitch live broadcasts
-  - Messages scraped with [Twitch Chat Scraper](https://github.com/karl977/TwitchChatScraper) which I made for this project aswell
+  - Messages scraped with [Twitch Chat Scraper](https://github.com/karl977/TwitchChatScraper), which I made for this project as well
+- Dark mode / Light mode
 - CSRF protection
 - Proper test coverage
 
-# Used technologies
+# Used technologies & libraries
 - Java & Spring framework
 - Stomp messaging
 - Vue 3 + Typescript
+- PrimeVue
 
-Testing
+### Testing
 - Testcontainers
 - AssertJ
 - Mockito
@@ -29,28 +31,29 @@ docker compose up
 ```
 Application will be available at http://localhost
 
-# Testing and Developing
-This app requires:
+# Developing
+### Requirements
 - OpenJDK 21 (other distributions will also probably work)
 - Maven 3.9.3 (other versions will also probably work)
 - Node (`frontend-maven-plugin` in this project uses version v18.18.2)
 - Yarn (`frontend-maven-plugin` in this project uses version v1.22.19)
 
-For developing frontend:
+### Developing frontend
 - In folder `src/main/app` run `yarn` to install dependencies
 - Then run `yarn dev` for hot reloaded development
 
-For backend 
-- Configure IntelliJ to start/stop your application
+### Developing backend 
 - Start development database container with `docker compose up` in `/docker` folder
+- Configure IntelliJ to start/stop your application
 
+# Testing
 For testing run in project root:
 ```
 mvn test
 ```
 
 # Building a .jar
-To build the application run in project root
+To build the application run in project root:
 ```
 mvn clean package
 ```
