@@ -87,17 +87,6 @@ $card-image-width: 440px;
     margin-right: 20px;
 }
 
-.badge-img{
-    margin-right: 4px;
-    position: relative;
-    top: 3px; 
-}
-
-.chat-message-img {
-    position: relative;
-    top: 6px;
-}
-
 .clip-view {
     height: 660px;
 }
@@ -119,10 +108,33 @@ $card-image-width: 440px;
     max-height: 542px;
     padding: 5px 0px;
 }
+
 .chat-message{
     display:block;
-    margin-top: 5px;
+    margin-top: 8px;
     word-break: break-word;
+    line-height: 1.1rem;
+    font-size: 0.96rem;
+}
+
+.badge-img-container{
+    height: 1.2rem;
+}
+
+.badge-img{
+    margin-right: 4px; 
+}
+
+.chat-message-img-container {
+    display: inline-flex;
+    justify-content: center;
+    height: 1rem;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.chat-message-text-container{
+    vertical-align: middle;
 }
 
 .message-box-container {

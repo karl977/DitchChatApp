@@ -54,7 +54,7 @@ function scrollChatToBottom() {
                 if (chatBox.value) {
                     chatBox.value.scrollTop = chatBox.value.scrollHeight;
                 }
-            }, 100)
+            }, 200)
         }
     })
 }
